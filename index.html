@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>lucmsilva - SizeCalc</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			background-color: #202125;
+			color: white;
+			padding: 20px;
+		}
+
+		label {
+			display: block;
+			margin-bottom: 5px;
+		}
+
+		input[type="number"] {
+			padding: 5px;
+			border: 1px solid #CCC;
+			border-radius: 4px;
+			width: 100%;
+			margin-bottom: 10px;
+		}
+	</style>
+</head>
+<body>
+	<h1>lucmsilva - SizeCalc</h1>
+
+	<label>Gigabytes (GB):</label>
+	<input type="number" id="gb">
+
+	<label>Megabytes (MB):</label>
+	<input type="number" id="mb">
+
+	<button onclick="gbToMb()">GB para MB</button>
+	<button onclick="mbToGb()">MB para GB</button>
+
+	<script>
+		function gbToMb() {
+			var gb = document.getElementById("gb").value;
+			var mb = gb * 1024;
+			document.getElementById("mb").value = mb;
+		}
+
+		function mbToGb() {
+			var mb = document.getElementById("mb").value;
+			var gb = mb / 1024;
+			document.getElementById("gb").value = gb;
+		}
+	</script>
+</body>
+</html>
